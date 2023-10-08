@@ -1,0 +1,16 @@
+[user]
+	name = breiner2000
+	email = breinergcp@estudiantec.cr
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+	eol = lf
+	editor = nano
+[pull]
+	rebase = false
+[push]
+	default = simple
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	rescue = !git fsck --full --no-reflogs --unreachable --lost-found | grep commit | cut -d\\  -f3 | xargs -n 1 git log -n 1 --pretty=oneline > .git/lost-found.txt
