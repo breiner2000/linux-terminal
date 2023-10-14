@@ -27,7 +27,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # JAVA JDK
-JAVA_HOME=/home/breiner/jdk-17.0.7
+JAVA_HOME=/home/$USER/jdk-17.0.7
 export JAVA_HOME
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
@@ -37,11 +37,11 @@ export PATH=$PATH:/usr/bin/obsidian
 
 
 # Added by Toolbox App
-export PATH="$PATH:/home/breiner/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:/home/$USER/.local/share/JetBrains/Toolbox/scripts"
 
 
 # ngrok 
-export PATH=$PATH:/home/breiner/.ngrok
+export PATH=$PATH:/home/$USER/.ngrok
 
 
 

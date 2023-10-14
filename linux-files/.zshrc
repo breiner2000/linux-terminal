@@ -4,6 +4,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 plugins=(git zsh-autosuggestions aliases)
 source $ZSH/oh-my-zsh.sh
-source "/home/$USER/.bin/$USER-env.zsh"
+source "/home/breiner/.bin/breiner-env.zsh"
 eval "$(starship init zsh)"
-export PATH=$PATH:/home/$USER/.spicetify
+export PATH=$PATH:/home/breiner/.spicetify

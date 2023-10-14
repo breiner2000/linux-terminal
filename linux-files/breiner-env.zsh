@@ -26,13 +26,11 @@ export PATH=$PATH:/home/$USER/.ngrok
 # Alias for exa
 alias ls='exa --icons' 
 alias l='exa --grid --all --icons'
-
 alias ll='exa --all --long --no-user --no-filesize --header'
 alias lt='exa --tree --level=2'
 
 # Alias for neofetch
 alias neofetch='neofetch --source ~/.config/neofetch/hunter'
-
 
 # Alias for normal commands 
 alias c='clear'

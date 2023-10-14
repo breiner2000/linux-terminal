@@ -3,22 +3,22 @@
 # mover archivos del directorio actual a la ubicacion correspondiente 
 
 # configuracion de nano
-sudo mv nanorc /etc/nanorc
+sudo cp ./linux-files/nanorc /etc/nanorc
 
 # configuracion de git
-sudo mv .gitconfig ~/
+sudo cp ./linux-files/.gitconfig ~/
 
 # archivo de configuracion para zsh
-sudo mv breiner-env.zsh ~/.bin/"$USER"-env.zsh
+[ -d ~/.bin ] || mkdir ~/.bin && sudo cp breiner-env.zsh ~/.bin/"$USER"-env.zsh
 
 # configuracion zsh para el usuario actual
-sudo mv .zshrc ~/
+sudo cp ./linux-files/.zshrc ~/
 
 # configuracion de starship 
-sudo mv starship.toml ~/.config/
+sudo cp ./linux-files/starship.toml ~/.config/
 
 # carpeta configuracion de kitty 
-sudo mv kitty ~/.config/
+sudo cp ./linux-files/kitty ~/.config/
 
 # profile
-sudo mv .profile ~/
+sudo cp ./linux-files/.profile ~/
