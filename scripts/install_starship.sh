@@ -9,7 +9,7 @@ fi
 
 # Instalar Starship
 echo "Instalando Starship..."
-curl -sS https://starship.rs/install.sh | sh -s -- --yes
+sudo curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 # Verificar si la instalación fue exitosa
 if [ $? -eq 0 ]; then
