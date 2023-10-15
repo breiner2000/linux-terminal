@@ -1,12 +1,10 @@
 #!/bin/bash
 
-username=$(whoami)
-
 # Paso 1: Crear el directorio si no existe
 sudo mkdir -p /etc/sudoers.d/
 
 # Paso 2: Crear o editar el archivo con el contenido deseado
-echo "$username ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$username
+echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 
 
 # Verificar si la configuración se aplicó correctamente
