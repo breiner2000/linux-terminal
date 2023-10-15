@@ -1,8 +1,15 @@
 #!/bin/bash
 
-# curl -sS https://starship.rs/install.sh | sh
+# Desinstalar Starship si ya está instalado
+starship_path=$(which starship)
+if [ -n "$starship_path" ]; then
+    echo "Desinstalando Starship existente..."
+    sudo rm -f "$starship_path"
+fi
 
-FORCE_INSTALL=1 curl -sS https://starship.rs/install.sh | bash -s -- --yes
+# Instalar Starship
+echo "Instalando Starship..."
+curl -sS https://starship.rs/install.sh | bash -s -- --yes
 
 # Verificar si la instalación fue exitosa
 if [ $? -eq 0 ]; then
