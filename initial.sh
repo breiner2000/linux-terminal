@@ -2,7 +2,7 @@
 
 # Instalar fuentes
 
-font_res=$(./scripts/install-fonts.sh)
+font_res=$(./scripts/install-font.sh)
 
 
 # Verificar el código de salida y actuar en consecuencia
