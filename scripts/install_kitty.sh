@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install kitty
+sudo apt install kitty -y
 
 # cambiar el emulador terminal predeterminado a kitty 
 
