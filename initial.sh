@@ -15,7 +15,7 @@ zsh_res=$?
 ohmyzsh_res=$?
 
 ./scripts/install_zsh-autosuggestions.sh
-zsh-autosuggestions_res=$?
+zsh_autosuggestions_res=$?
 
 ./scripts/install_starship.sh
 starship_res=$?
@@ -26,8 +26,7 @@ kitty_res=$?
 
 # Verificar el código de salida y actuar en consecuencia
 if [ "$font_res" -eq 0 ]; then
-    echo -e "\e[1;32m
-    Fira Code Nerd Font ha sido instalada.
+    echo -e "\e[1;32m Fira Code Nerd Font ha sido instalada.
     \e[0m"
 else
     echo -e "\e[1;31m Error al instalar Fira Code Nerd Font.
@@ -58,7 +57,7 @@ else
     \e[0m"
 fi
 
-if [ "$zsh-autosuggestions_res" -eq 0 ]; then
+if [ "$zsh_autosuggestions_res" -eq 0 ]; then
     echo -e "\e[1;32m Zsh Autosuggestions ha sido instalado.
     \e[0m"
 else
