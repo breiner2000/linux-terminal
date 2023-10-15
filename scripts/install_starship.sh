@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # Desinstalar Starship si ya está instalado
 starship_path=$(which starship)
@@ -11,9 +11,3 @@ fi
 echo "Instalando Starship..."
 sudo curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
 
-# Verificar si la instalación fue exitosa
-if [ $? -eq 0 ]; then
-    exit 0
-else
-    exit 1
-fi
