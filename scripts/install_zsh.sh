@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Instalar Zsh
-sudo apt install curl wget zsh -y
+# Instalar Zsh y otros paquetes necesarios
+sudo apt install curl wget zsh most exa -y
 
 # Cambiar el shell a Zsh para el usuario actual y para root
 sudo usermod -s $(which zsh) $USER
