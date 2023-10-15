@@ -1,4 +1,4 @@
-# Configuración de entorno :)
+# Configuración de terminal :)
 
 Archivos de configuración importantes de mi entorno de trabajo.
 
