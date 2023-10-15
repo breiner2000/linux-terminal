@@ -2,8 +2,8 @@
 
 # Instalar fuentes
 
-font_res=$(./scripts/install-font.sh)
-
+./scripts/install-font.sh
+font_res=$?
 
 # Verificar el código de salida y actuar en consecuencia
 if [ "$font_res" -eq 0 ]; then
