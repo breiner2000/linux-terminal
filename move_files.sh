@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# mover archivos del directorio actual a la ubicacion correspondiente 
+# copiar archivos del directorio actual a la ubicacion correspondiente 
 
 # configuracion de nano
 sudo cp ./linux-files/nanorc /etc/nanorc
@@ -8,8 +8,8 @@ sudo cp ./linux-files/nanorc /etc/nanorc
 # configuracion de git
 sudo cp ./linux-files/.gitconfig ~/
 
-# archivo de configuracion para zsh
-[ -d ~/.bin ] || mkdir ~/.bin && sudo cp breiner-env.zsh ~/.bin/"$USER"-env.zsh
+# copia el archivo de configuracion .zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
+[ -d ~/.bin ] || mkdir ~/.bin && file=$(find ./linux-files -maxdepth 1 -type f -name '*-env.zsh') && sudo cp "$file" ~/.bin/"$USER"-env.zsh
 
 # configuracion zsh para el usuario actual
 sudo cp ./linux-files/.zshrc ~/
