@@ -15,11 +15,7 @@ if [ $? -eq 0 ]; then
     # Actualizar la caché de fuentes
     fc-cache -f -v
 
-    echo -e "\e[1;32m
-    Nerd Font ha sido instalada.
-    \e[0m"
+    exit 0
 else
-    echo -e "\e[1;31m
-    Error al instalar Nerd Font.
-    \e[0m"
+    exit 1
 fi

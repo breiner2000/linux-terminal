@@ -8,7 +8,7 @@ sudo cp ./linux-files/nanorc /etc/nanorc
 # configuracion de git
 sudo cp ./linux-files/.gitconfig ~/
 
-# copia el archivo de configuracion .zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
+# configuracion zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
 [ -d ~/.bin ] || mkdir ~/.bin && file=$(find ./linux-files -maxdepth 1 -type f -name '*-env.zsh') && sudo cp "$file" ~/.bin/"$USER"-env.zsh
 
 # configuracion zsh para el usuario actual
