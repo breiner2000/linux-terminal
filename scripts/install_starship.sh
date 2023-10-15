@@ -1,7 +1,6 @@
 #!/bin/bash
 
-curl -sS https://starship.rs/install.sh | sh
-
+# curl -sS https://starship.rs/install.sh | sh
 
 FORCE_INSTALL=1 curl -sS https://starship.rs/install.sh | bash -s -- --yes
 
