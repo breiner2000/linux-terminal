@@ -18,7 +18,7 @@ sudo cp ./linux-files/.zshrc ~/
 sudo cp ./linux-files/starship.toml ~/.config/
 
 # carpeta configuracion de kitty 
-sudo cp ./linux-files/kitty ~/.config/
+sudo cp -r ./linux-files/kitty ~/.config/
 
 # profile
 sudo cp ./linux-files/.profile ~/
