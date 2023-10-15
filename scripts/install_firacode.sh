@@ -9,7 +9,9 @@ wget -O nerd_font.zip "https://github.com/ryanoasis/nerd-fonts/releases/download
 
 # Verificar si la descarga fue exitosa
 if [ $? -eq 0 ]; then
-    unzip nerd_font.zip -d "$font_dir"
+    # La opción -o sobrescribe sin preguntar
+    unzip -o nerd_font.zip -d "$font_dir"  
+    
     rm nerd_font.zip
 
     # Actualizar la caché de fuentes
