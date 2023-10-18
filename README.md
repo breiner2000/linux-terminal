@@ -1,6 +1,6 @@
 # Configuración de terminal :)
 
-Archivos de configuración importantes de mi entorno de trabajo.
+Archivos de configuración importantes de mi entorno de trabajo y la configuración de la terminal desde 0.
 
 ## Instalar herramientas
 
