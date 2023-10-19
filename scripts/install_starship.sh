@@ -9,5 +9,11 @@ fi
 
 # Instalar Starship
 echo "Instalando Starship..."
-sudo curl -S https://starship.rs/install.sh | sudo sh 
+sudo wget https://starship.rs/install.sh 
+
+# Ejecutar el script de instalación 
+sudo sh install.sh
+
+# Eliminar el script de instalación
+sudo rm -f install.sh
 
