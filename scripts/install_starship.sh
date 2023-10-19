@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 
 # Desinstalar Starship si ya está instalado
 starship_path=$(which starship)
