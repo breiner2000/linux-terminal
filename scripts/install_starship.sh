@@ -12,7 +12,7 @@ echo "Instalando Starship..."
 sudo wget https://starship.rs/install.sh 
 
 # Ejecutar el script de instalación 
-sudo sh install.sh
+sudo sh install.sh -y
 
 # Eliminar el script de instalación
 sudo rm -f install.sh
