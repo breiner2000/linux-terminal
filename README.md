@@ -4,6 +4,8 @@ Archivos de configuración importantes de mi entorno de trabajo y la configuraci
 
 ## Instalar herramientas
 
+> No ejecutar los archivos como sudo
+
 Al ejecutar el script `./initial.sh` se instalara y configurara lo siguiente:
 
 - Permitir al usuario actual ejecutar comandos como admin sin necesidad de contraseñas
