@@ -2,9 +2,9 @@
 
 Archivos de configuración importantes de mi entorno de trabajo y la configuración de la terminal desde 0.
 
-## Instalar herramientas
-
 > No ejecutar los archivos como sudo
+
+## Instalar herramientas
 
 Al ejecutar el script `./initial.sh` se instalara y configurara lo siguiente:
 
@@ -18,7 +18,7 @@ Al ejecutar el script `./initial.sh` se instalara y configurara lo siguiente:
 
 ## Copiar archivos de configuración al entorno
 
-Utilizar `./move_files.sh` para copiar los archivos de configuración a sus respectivos directorios. Archivos de configuración:
+Utilizar `./copy_files.sh` para copiar los archivos de configuración a sus respectivos directorios. Archivos de configuración:
 
 - nanorc
 - .gitconfig
@@ -30,6 +30,10 @@ Utilizar `./move_files.sh` para copiar los archivos de configuración a sus resp
 
 ## Copiar archivos de configuración para guardarlos
 
-Utilizar `./copy_files` si se quieren copiar los archivos de configuración anteriormente mencionados a la carpeta _linux-files_ para ser utilizados con el `./move_files` en el mismo equipo o en otro.
+Utilizar `./save_files.sh` si se quieren copiar los archivos de configuración anteriormente mencionados a la carpeta _linux-files_ para ser utilizados con el `./copy_files.sh` en el mismo equipo o en otro.
 
 > Nota: Esto serviría como backup de los archivos de configuración.
+
+# Archivos adicionales
+
+En la carpeta linux-files se encuentra la configuración `dash-to-panel-settings` para la extensión de gnome `dash-to-panel`.

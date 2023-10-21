@@ -1,26 +1,24 @@
 #!/bin/bash
 
-# Creacion de directorios
-sudo mkdir -p linux-files/kitty
+# copiar archivos del directorio actual a la ubicacion correspondiente 
 
 # configuracion de nano
-sudo cp /etc/nanorc ./linux-files/
+sudo cp ./linux-files/nanorc /etc/nanorc
 
-# gitconfig
-sudo cp ~/.gitconfig ./linux-files/
+# configuracion de git
+sudo cp ./linux-files/.gitconfig ~/
 
-# archivo de configuracion para zsh
-# contiene variables de entorno, alias y configuracion de zsh
-sudo cp ~/.bin/"$USER"-env.zsh ./linux-files/
+# configuracion zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
+[ -d ~/.bin ] || mkdir ~/.bin && file=$(find ./linux-files -maxdepth 1 -type f -name '*-env.zsh') && sudo cp "$file" ~/.bin/"$USER"-env.zsh
 
 # configuracion zsh para el usuario actual
-sudo cp ~/.zshrc ./linux-files/
+sudo cp ./linux-files/.zshrc ~/
 
 # configuracion de starship 
-sudo cp ~/.config/starship.toml ./linux-files/
+sudo cp ./linux-files/starship.toml ~/.config/
 
-# tema y configuracion de kitty
-sudo cp -r ~/.config/kitty/kitty.conf ~/.config/kitty/current-theme.conf ./linux-files/kitty/
+# carpeta configuracion de kitty 
+sudo cp -r ./linux-files/kitty ~/.config/
 
 # profile
-sudo cp ~/.profile ./linux-files/
+sudo cp ./linux-files/.profile ~/
