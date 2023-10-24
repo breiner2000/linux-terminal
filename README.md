@@ -28,6 +28,8 @@ Utilizar `./copy_files.sh` para copiar los archivos de configuración a sus resp
 - .profile
 - kitty
 
+> Modificar el archivo `.gitconfig` con el usuario y contraseña de git
+
 ## Copiar archivos de configuración para guardarlos
 
 Utilizar `./save_files.sh` si se quieren copiar los archivos de configuración anteriormente mencionados a la carpeta _linux-files_ para ser utilizados con el `./copy_files.sh` en el mismo equipo o en otro.
