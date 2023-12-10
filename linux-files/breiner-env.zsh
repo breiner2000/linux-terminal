@@ -4,16 +4,12 @@ export JAVA_HOME="/opt/jdk-17"
 export GRADLE_HOME="/opt/gradle"
 export MAVEN_HOME="/opt/maven"
 export NODE_HOME="/opt/node"
-export TOOLBOX_HOME="/opt/jetbrains-toolbox"
-
 export MTR_OPTIONS="-4noLSRDBAWVJMX"
 export NMON="cmndl"
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$GRADLE_HOME/bin:$PATH
 export PATH=$MAVEN_HOME/bin:$PATH
 export PATH=$NODE_HOME/bin:$PATH
-export PATH=$TOOLBOX_HOME:$PATH
-
 export PATH=/home/$USER/.bin:$PATH
 export PAGER="/usr/bin/most -s"
 
