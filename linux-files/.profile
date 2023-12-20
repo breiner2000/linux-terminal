@@ -37,7 +37,7 @@ export PATH=$PATH:/usr/bin/obsidian
 
 
 # Added by Toolbox App
-export PATH="$PATH:/home/$USER/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:/home/bcp/.local/share/JetBrains/Toolbox/scripts"
 
 
 # ngrok 
