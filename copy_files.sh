@@ -10,16 +10,7 @@ copy_with_message() {
     source_file=$1
     destination=$2
     
-    # Asegurarse de que el destino sea un directorio
-    if [ -d "$destination" ]; then
-        # Concatenar el nombre del archivo al destino
-        destination="$destination/$(basename "$source_file")"
-    else
-        echo -e "${RED}Error: $destination no es un directorio.${NC}"
-        exit 1
-    fi
-
-    sudo cp -r "$source_file" "$destination"
+    sudo cp -r $source_file $destination
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}Archivo $source_file copiado con éxito a $destination.${NC}"
     else
@@ -32,7 +23,7 @@ copy_with_message() {
 copy_with_message "./linux-files/nanorc" "/etc/nanorc"
 
 # configuracion de git
-copy_with_message "./linux-files/.gitconfig" "~"
+sudo cp ./linux-files/.gitconfig ~/
 
 # configuracion zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
 [ -d ~/.bin ] || mkdir ~/.bin
