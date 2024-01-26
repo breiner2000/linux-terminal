@@ -38,7 +38,7 @@ copy_file ./linux-files/.gitconfig ~/
 # configuracion zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
 [ -d ~/.bin ] || mkdir ~/.bin
 file=$(find "./linux-files" -maxdepth 1 -type f -name '*-env.zsh')
-mv "./linux-files/$file" "./linux-files/$USER-env.zsh"
+mv "$file" "./linux-files/$USER-env.zsh"
 copy_file "./linux-files/$USER-env.zsh" ~/.bin/
 
 # configuracion zsh para el usuario actual
