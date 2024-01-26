@@ -37,11 +37,12 @@ copy_file ./linux-files/.gitconfig ~/
 
 # configuracion zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
 [ -d ~/.bin ] || mkdir ~/.bin
-file=$(find "./linux-files" -maxdepth 1 -type f -name '*-env.zsh')
-copy_file $file ~/.bin/$USER-env.zsh
+file=$(find "./linux-files" -maxdepth 1 -type f -name '*-env.zsh'
+changeFileName= mv $file ~/.bin/$USER-env.zsh
+copy_file ./linux-files/$USER-env.zsh ~/.bin/
 
 # configuracion zsh para el usuario actual
-copy_file ./linux-files/.zshrc ~
+copy_file ./linux-files/.zshrc ~/
 
 # configuracion de starship 
 copy_file ./linux-files/starship.toml ~/.config/
@@ -50,6 +51,6 @@ copy_file ./linux-files/starship.toml ~/.config/
 copy_file ./linux-files/kitty ~/.config/
 
 # profile
-copy_file ./linux-files/.profile ~
+copy_file ./linux-files/.profile ~/
 
 echo -e "${GREEN}Todas las copias se realizaron con éxito.${NC}"
