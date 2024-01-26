@@ -30,7 +30,7 @@ copy_file() {
 
 
 # configuracion de nano
-copy_file ./linux-files/nanorc /etc/nanorc
+copy_file ./linux-files/nanorc /etc
 
 # configuracion de git
 copy_file ./linux-files/.gitconfig ~/
