@@ -6,11 +6,20 @@ RED='\033[0;31m'
 NC='\033[0m' # No color
 
 # Función para copiar con mensaje de éxito o error
-copy_with_message() {
+copy_file() {
     source_file=$1
     destination=$2
     
-    sudo cp -r $source_file $destination
+    # Asegurarse de que el destino sea un directorio
+    if [ -d "$destination" ]; then
+        # Concatenar el nombre del archivo al destino
+        destination="${destination%/}/$(basename "$source_file")"
+    else
+        echo -e "${RED}Error: $destination no es un directorio.${NC}"
+        exit 1
+    fi
+
+    sudo cp -r "$source_file" "$destination"
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}Archivo $source_file copiado con éxito a $destination.${NC}"
     else
@@ -19,27 +28,28 @@ copy_with_message() {
     fi
 }
 
+
 # configuracion de nano
-copy_with_message "./linux-files/nanorc" "/etc/nanorc"
+copy_file ./linux-files/nanorc /etc/nanorc
 
 # configuracion de git
-sudo cp ./linux-files/.gitconfig ~/
+copy_file ./linux-files/.gitconfig ~/
 
 # configuracion zsh con la extension -env.zsh en el directorio .bin con el nombre del usuario actual
 [ -d ~/.bin ] || mkdir ~/.bin
 file=$(find "./linux-files" -maxdepth 1 -type f -name '*-env.zsh')
-copy_with_message "$file" "~/.bin/$USER-env.zsh"
+copy_file $file ~/.bin/$USER-env.zsh
 
 # configuracion zsh para el usuario actual
-copy_with_message "./linux-files/.zshrc" "~"
+copy_file ./linux-files/.zshrc ~
 
 # configuracion de starship 
-copy_with_message "./linux-files/starship.toml" "~/.config/"
+copy_file ./linux-files/starship.toml ~/.config/
 
 # carpeta configuracion de kitty 
-copy_with_message "./linux-files/kitty" "~/.config/"
+copy_file ./linux-files/kitty ~/.config/
 
 # profile
-copy_with_message "./linux-files/.profile" "~"
+copy_file ./linux-files/.profile ~
 
 echo -e "${GREEN}Todas las copias se realizaron con éxito.${NC}"

@@ -13,7 +13,7 @@ copy_file() {
     # Asegurarse de que el destino sea un directorio
     if [ -d "$destination" ]; then
         # Concatenar el nombre del archivo al destino
-        destination="$destination/$(basename "$source_file")"
+        destination="${destination%/}/$(basename "$source_file")"
     else
         echo -e "${RED}Error: $destination no es un directorio.${NC}"
         exit 1
@@ -35,8 +35,8 @@ copy_file ~/.gitconfig ./linux-files/                   # gitconfig
 copy_file ~/.bin/"$USER"-env.zsh ./linux-files/         # Archivo de configuración para zsh
 copy_file ~/.zshrc ./linux-files/                       # Configuración zsh para el usuario actual
 copy_file ~/.config/starship.toml ./linux-files/        # Configuración de Starship
-copy_file ~/.config/kitty/kitty.conf ./linux-files/kitty/ # Tema y configuración de Kitty
-copy_file ~/.config/kitty/current-theme.conf ./linux-files/kitty/ # Tema y configuración de Kitty
+copy_file ~/.config/kitty/kitty.conf ./linux-files/kitty # Tema y configuración de Kitty
+copy_file ~/.config/kitty/current-theme.conf ./linux-files/kitty # Tema y configuración de Kitty
 copy_file ~/.profile ./linux-files/                     # Profile
 
 echo -e "${GREEN}Todas las copias se realizaron con éxito.${NC}"
