@@ -1,6 +1,6 @@
 # variables de entorno para zsh
 # source "/home/xyz/.bin/xyz-env.zsh"
-export JAVA_HOME="/opt/jdk-17"
+export JAVA_HOME="/opt/jdk-21"
 export GRADLE_HOME="/opt/gradle"
 export MAVEN_HOME="/opt/maven"
 export NODE_HOME="/opt/node"
@@ -33,4 +33,7 @@ alias lt='exa --tree --level=2'
 alias neofetch='neofetch --source ~/.config/neofetch/hunter'
 
 # Alias for normal commands 
+export PATH=$PATH:/home/$USER/.bin/menu.sh
 alias c='clear'
+alias cx='/home/$USER/.bin/menu.sh'
+

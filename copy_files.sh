@@ -53,4 +53,8 @@ copy_file ./linux-files/kitty ~/.config/
 # profile
 copy_file ./linux-files/.profile ~/
 
+# menu de zsh
+copy_file ./linux-files/menu.sh ~/.bin/
+
+
 echo -e "${GREEN}Todas las copias se realizaron con éxito.${NC}"

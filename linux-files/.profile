@@ -27,7 +27,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # JAVA JDK
-JAVA_HOME=/home/$USER/jdk-17.0.7
+JAVA_HOME=/home/$USER/jdk-21
 export JAVA_HOME
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
@@ -42,7 +42,3 @@ export PATH="$PATH:/home/bcp/.local/share/JetBrains/Toolbox/scripts"
 
 # ngrok 
 export PATH=$PATH:/home/$USER/.ngrok
-
-
-
-. "$HOME/.cargo/env"

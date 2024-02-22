@@ -38,5 +38,7 @@ copy_file ~/.config/starship.toml ./linux-files/        # Configuración de Star
 copy_file ~/.config/kitty/kitty.conf ./linux-files/kitty # Tema y configuración de Kitty
 copy_file ~/.config/kitty/current-theme.conf ./linux-files/kitty # Tema y configuración de Kitty
 copy_file ~/.profile ./linux-files/                     # Profile
+copy_file ~/.bin/menu.sh ./linux-files/ # Menú de zsh
+
 
 echo -e "${GREEN}Todas las copias se realizaron con éxito.${NC}"
