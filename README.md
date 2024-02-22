@@ -27,6 +27,7 @@ Utilizar `./copy_files.sh` para copiar los archivos de configuración a sus resp
 - starship.toml
 - .profile
 - kitty
+- menu para conexiones ssh
 
 > Modificar el archivo `.gitconfig` con el usuario y correo de git
 
